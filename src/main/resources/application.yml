@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/book_borrowing_system?createDatabaseIfNotExist = true
-    username: root
-    password: Dinesh@12345
+    url: // Add your url to the database here
+    username: // Add your username to the database here
+    password: // Add your password to the database here
 
   jpa:
     hibernate:
