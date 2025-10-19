@@ -41,4 +41,20 @@ public class BookController {
          return bookService.getAllDetail();
     }
 
+    @GetMapping("/search/{bookId}")
+    public Book searchBookById(@PathVariable String  bookId){
+        return bookService.searchByID(bookId);
+    }
+
+    @PutMapping("/update")
+    public String updateBook(@RequestBody Book book){
+        bookService.updateBook(book);
+        return "Book updated successfully!";
+    }
+
+    @DeleteMapping("delete/{bookId}")
+    public String deleteBookById(@PathVariable String bookId){
+        bookService.deleteBook(bookId);
+        return "Book deleted successfully!";
+    }
 }
